@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NBFC & Insurance Aggregator</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    /* Navigation Styles */
+    header {
+      background: #00539C;
+      color: #fff;
+      padding: 1rem 0;
+    }
+    
+    .container {
+      width: 90%;
+      margin: auto;
+      overflow: hidden;
+    }
+    
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+    
+    nav ul li {
+      margin-left: 20px;
+    }
+    
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    /* Hero Section */
+    .hero {
+      background: url('https://via.placeholder.com/1500x500') no-repeat center center/cover;
+      height: 500px;
+      position: relative;
+      color: #fff;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    
+    .hero p {
+      font-size: 1.2rem;
+    }
+    
+    /* Section Styles */
+    section {
+      padding: 2rem 0;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+      color: #00539C;
+    }
+    
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    
+    .card {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 1rem;
+      width: 300px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .card h3 {
+      color: #00539C;
+      margin-bottom: 0.5rem;
+    }
+    
+    .card p {
+      margin-bottom: 0.5rem;
+    }
+    
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+    }
+    
+    /* Responsive Navigation */
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        display: none;
+      }
+      
+      nav ul.active {
+        display: flex;
+      }
+      
+      .menu-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <h1>Aggregato</h1>
+        </div>
+        <span class="menu-toggle" onclick="toggleMenu()">&#9776;</span>
+        <ul id="nav-list">
+          <li><a href="#nbfc">NBFC Aggregator</a></li>
+          <li><a href="#insurance">Insurance Aggregator</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Welcome to Aggregato</h1>
+      <p>Your trusted platform for NBFC and Insurance comparisons</p>
+    </div>
+  </section>
+
+  <!-- NBFC Aggregator Section -->
+  <section id="nbfc">
+    <div class="container">
+      <h2 class="section-title">NBFC Aggregator</h2>
+      <p style="text-align: center; margin-bottom: 1.5rem;">Compare a wide range of NBFC products to find the best financial solution tailored to your needs.</p>
+      <div class="cards">
+        <div class="card">
+          <h3>Personal Loans</h3>
+          <p>Compare personal loan products from top NBFCs.</p>
+          <a href="#">Learn More</a>
+        </div>
+        <div class="card">
+          <h3>Asset Finance</h3>
+          <p>Find competitive asset finance options for your business.</p>
+          <a href="#">Learn More</a>
+        </div>
+        <div class="card">
+          <h3>Business Loans</h3>
+          <p>Discover NBFC solutions for your business funding needs.</p>
+          <a href="#">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Insurance Aggregator Section -->
+  <section id="insurance" style="background: #e8f1f9;">
+    <div class="container">
+      <h2 class="section-title">Insurance Aggregator</h2>
+      <p style="text-align: center; margin-bottom: 1.5rem;">Compare policies from various insurers and secure the best protection for you and your loved ones.</p>
+      <div class="cards">
+        <div class="card">
+          <h3>Health Insurance</h3>
+          <p>Find affordable health insurance plans tailored to your needs.</p>
+          <a href="#">Learn More</a>
+        </div>
+        <div class="card">
+          <h3>Life Insurance</h3>
+          <p>Compare life insurance policies to secure your family's future.</p>
+          <a href="#">Learn More</a>
+        </div>
+        <div class="card">
+          <h3>Motor Insurance</h3>
+          <p>Discover motor insurance plans that provide complete coverage.</p>
+          <a href="#">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Us</h2>
+      <p style="max-width: 800px; margin: auto; text-align: center;">At Aggregato, we believe in simplifying the process of comparing financial and insurance products. Our platform aggregates data from top NBFCs and insurers to offer you transparent and unbiased comparisons. Whether you're looking for a loan or the right insurance policy, we’re here to help you make an informed decision.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" style="background: #e8f1f9;">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <p style="max-width: 800px; margin: auto; text-align: center;">Have any questions or need assistance? Get in touch with us at <a href="mailto:info@aggregato.com">info@aggregato.com</a>.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Aggregato. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      var navList = document.getElementById('nav-list');
+      navList.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
